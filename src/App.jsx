@@ -1,7 +1,7 @@
 import Waves from "./components/Waves.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
-import logo from "./assets/logo.jpg";
+import pic from "./assets/pic2.jpg";
 import TechStack from "./components/TechStack.jsx";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Hero />
           
           <div className="div3 flex justify-center items-center">
-            <img src={logo} alt="Logo" className="rounded-2xl md:max-w-70 md:rounded-full lg:w-full lg:max-w-90 aspect-square object-cover lg:rounded-full" />
+            <img src={pic} alt="Logo" className="rounded-2xl md:max-w-70 md:rounded-full lg:w-full lg:max-w-90 aspect-square object-cover lg:rounded-full" />
           </div>
           
           <TechStack />

@@ -1,8 +1,9 @@
 import React from 'react'
+import SpotlightCard from './SpotlightCard'
 
 const Hero = () => {
   return (
-    <div className="div2 col-span-3 md:col-span-2 sm:col-span-1 bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl mt-10 p-4">
+    <SpotlightCard className="div2 col-span-3 md:col-span-2 sm:col-span-1 bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl mt-10 p-4">
       
       <h1 className="text-black text-4xl p-2 font-primary">{"<-"}Md Rahbir Mahdi{"->"}</h1>
       
@@ -14,21 +15,21 @@ const Hero = () => {
       </p>
 
       <div className='flex flex-wrap gap-4 mt-6'>
-        <a className="border-2 cursor-none text-secondary hover:text-white hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="src/assets/Resume.pdf" download="Resume.pdf">
+        <a className="border-2 cursor-none text-secondary hover:border-[#694934] hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="src/assets/Resume.pdf" download="Resume.pdf">
           Resume
         </a>
 
-        <a className="border-2 cursor-none text-secondary hover:text-white hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://www.linkedin.com/in/rahbirmahdi" target="_blank" rel="noopener noreferrer">
+        <a className="border-2 cursor-none text-secondary hover:border-[#694934] hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://www.linkedin.com/in/rahbirmahdi" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
 
-        <a className="border-2 cursor-none text-secondary hover:text-white hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://github.com/Rahbir1518" target="_blank" rel="noopener noreferrer">
+        <a className="border-2 cursor-none text-secondary hover:border-[#694934] hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://github.com/Rahbir1518" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
 
       </div>
 
-    </div>
+    </SpotlightCard>
   )
 }
 

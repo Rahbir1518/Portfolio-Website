@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(255, 197, 128, 1)" }) => {
+const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(185, 140, 115, 1)" }) => {
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -45,7 +45,7 @@ const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(255, 1
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out"
         style={{
           opacity,
-          background: `radial-gradient(circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 80%)`,
+          background: `radial-gradient(circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,
         }}
       />
       {children}
