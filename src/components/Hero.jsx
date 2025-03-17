@@ -14,15 +14,15 @@ const Hero = () => {
       </p>
 
       <div className='flex flex-wrap gap-4 mt-6'>
-        <a className="border-2 cursor-none text-secondary hover:text-slate-500 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="src/assets/Resume.pdf" download="Resume.pdf">
+        <a className="border-2 cursor-none text-secondary hover:text-white hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="src/assets/Resume.pdf" download="Resume.pdf">
           Resume
         </a>
 
-        <a className="border-2 cursor-none text-secondary hover:text-slate-500 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://www.linkedin.com/in/rahbirmahdi" target="_blank" rel="noopener noreferrer">
+        <a className="border-2 cursor-none text-secondary hover:text-white hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://www.linkedin.com/in/rahbirmahdi" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
 
-        <a className="border-2 cursor-none text-secondary hover:text-slate-500 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://github.com/Rahbir1518" target="_blank" rel="noopener noreferrer">
+        <a className="border-2 cursor-none text-secondary hover:text-white hover:bg-ternary/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://github.com/Rahbir1518" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
 

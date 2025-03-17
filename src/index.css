@@ -5,8 +5,10 @@
 @theme{
     --font-primary: "Monomaniac One", "sans-serif";
     --font-secondary: "Merriweather", "sans-serif";
-    --color-secondary: #2E3135;
-    --color-primary:#EDE8D0;
+  
+    --color-primary:#EFD5B2;
+    --color-secondary: #020002;
+    --color-ternary:#BE5103;
 }
 
 .parent {
@@ -49,4 +51,3 @@
   grid-row: span 2 / span 2;
   grid-row-start: 7;
 }
-      

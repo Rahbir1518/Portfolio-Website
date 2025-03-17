@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="relative min-h-screen bg-black cursor-none overflow-auto">
         <div className="fixed inset-0 z-0">
-          <Waves backgroundColor="#FFFFFF" lineColor="secondary" />
+          <Waves backgroundColor="white" lineColor="secondary" />
         </div>
 
         <div className="relative z-10 parent grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-2 text-white p-4">
@@ -19,7 +19,7 @@ function App() {
           <Hero />
           
           <div className="div3 flex justify-center items-center">
-            <img src={logo} alt="Logo" className="w-1/2 max-w-40 md:w-3/4 md:max-w-60 lg:w-full lg:max-w-80 aspect-square object-cover rounded-full" />
+            <img src={logo} alt="Logo" className="rounded-2xl md:max-w-70 md:rounded-full lg:w-full lg:max-w-90 aspect-square object-cover lg:rounded-full" />
           </div>
           
           <TechStack />
