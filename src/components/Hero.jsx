@@ -3,7 +3,7 @@ import SpotlightCard from './SpotlightCard'
 
 const Hero = () => {
   return (
-    <SpotlightCard className="div2 col-span-3 md:col-span-2 sm:col-span-1 bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl mt-10 p-4">
+    <SpotlightCard className="div2 col-span-3 md:col-span-2 sm:col-span-1 bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl mt-10 p-4 ml-7">
       
       <h1 className="text-black text-4xl p-2 font-primary">{"<-"}Md Rahbir Mahdi{"->"}</h1>
       

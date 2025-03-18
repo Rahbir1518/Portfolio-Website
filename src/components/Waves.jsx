@@ -167,19 +167,17 @@ const Waves = ({
           
           // Extra repulsion force to clear the text area
           if (disperse && disperseRect) {
-            const margin = 20; // pixels of extra area around the text
+            const margin = 20; // extra area around the element
             const left = disperseRect.left - margin;
             const right = disperseRect.left + disperseRect.width + margin;
             const top = disperseRect.top - margin;
             const bottom = disperseRect.top + disperseRect.height + margin;
-            // p.x and p.y are assumed to be in viewport coordinates if the container covers the viewport
             if (p.x >= left && p.x <= right && p.y >= top && p.y <= bottom) {
               const centerX = disperseRect.left + disperseRect.width / 2;
               const centerY = disperseRect.top + disperseRect.height / 2;
               const dxRect = p.x - centerX;
               const dyRect = p.y - centerY;
               const distRect = Math.hypot(dxRect, dyRect) || 1;
-              // Adjust multiplier to control dispersal intensity
               const repulsion = (1 - distRect / (Math.max(disperseRect.width, disperseRect.height) / 2 + margin)) * 8;
               p.cursor.vx += (dxRect / distRect) * repulsion;
               p.cursor.vy += (dyRect / distRect) * repulsion;
@@ -226,7 +224,7 @@ const Waves = ({
 
     function tick(t) {
       const mouse = mouseRef.current;
-      // Immediate update (remove smoothing for responsiveness)
+      // Update immediately for responsiveness
       mouse.sx = mouse.x;
       mouse.sy = mouse.y;
       const dx = mouse.x - mouse.lx;
@@ -240,7 +238,7 @@ const Waves = ({
       mouse.a = Math.atan2(dy, dx);
 
       if (cursorRef.current) {
-        // Offset by half the cursor's size (adjust as needed)
+        // Use the viewport (client) coordinates directly for the custom cursor
         cursorRef.current.style.transform = `translate3d(${mouse.sx - 4}px, ${mouse.sy - 4}px, 0)`;
       }
 
@@ -253,7 +251,10 @@ const Waves = ({
       setSize();
       setLines();
     }
-    function onMouseMove(e) { updateMouse(e.pageX, e.pageY); }
+    function onMouseMove(e) { 
+      // Use clientX/Y so that scrolling does not interfere
+      updateMouse(e.clientX, e.clientY);
+    }
     function onTouchMove(e) {
       const touch = e.touches[0];
       updateMouse(touch.clientX, touch.clientY);
@@ -261,8 +262,9 @@ const Waves = ({
     function updateMouse(x, y) {
       const mouse = mouseRef.current;
       const b = boundingRef.current;
+      // For a fixed container b.left/top should be 0.
       mouse.x = x - b.left;
-      mouse.y = y - b.top + window.scrollY;
+      mouse.y = y - b.top;
       if (!mouse.set) {
         mouse.sx = mouse.x;
         mouse.sy = mouse.y;
