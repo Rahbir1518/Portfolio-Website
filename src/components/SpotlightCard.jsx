@@ -42,7 +42,7 @@ const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(185, 1
       className={`relative rounded-3xl border border-primary bg-primary overflow-hidden p-8 ${className}`}
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out"
+        className="pointer-events-none absolute inset-0 opacity-10% transition-opacity duration-500 ease-in-out"
         style={{
           opacity,
           background: `radial-gradient(circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,

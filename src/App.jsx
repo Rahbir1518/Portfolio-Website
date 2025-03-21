@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import pic from "./assets/pic2.jpg";
 import TechStack from "./components/TechStack.jsx";
+import FeaturedProjects from "./components/FeaturedProjects.jsx";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
           
           <TechStack />
 
-          {/* <div className="div5 bg-primary col-span-4 md:col-span-2 sm:col-span-1">5</div>
-          <div className="div6 bg-primary col-span-4 md:col-span-2 sm:col-span-1">6</div> */}
+          <FeaturedProjects />
+          {/* <div className="div6 bg-primary col-span-4 md:col-span-2 sm:col-span-1">6</div> */}
         </div>
       </div>
     </>
