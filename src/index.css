@@ -54,3 +54,98 @@
   grid-row: span 2 / span 2;
   grid-row-start: 7;
 }
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f4e3ce;
+}
+
+@property --widthSquare {
+  syntax: "<length>";
+  initial-value: 20px;
+  inherits: false;
+}
+.square {
+  width: var(--widthSquare);
+  aspect-ratio: 1/1;
+  border: 3px solid #404f03;
+  border-radius: 0.3rem;
+  margin-bottom: 0.2rem;
+  transform-origin: 100% 100%;
+  animation: roll 2000ms ease infinite;
+}
+@keyframes roll {
+  25% {
+    transform: translate(calc(var(--widthSquare) * -1));
+  }
+  50% {
+    transform: rotate(90deg) translateY(var(--widthSquare));
+  }
+  75% {
+    transform: rotate(180deg) translateY(var(--widthSquare));
+  }
+  100% {
+    transform: rotate(180deg) translate(var(--widthSquare), var(--widthSquare));
+  }
+}
+
+@property --widthScroll {
+  syntax: "<length>";
+  initial-value: 90px;
+  inherits: false;
+}
+.infinite-scroll {
+  position: relative;
+  width: calc(var(--widthSquare) * 3);
+  height: 2px;
+  overflow: hidden;
+}
+.infinite-scroll::before,
+.infinite-scroll::after {
+  content: "";
+  position: absolute;
+  width: var(--widthSquare);
+  height: 100%;
+  background: #404f03;
+}
+.infinite-scroll::before {
+  left: calc(50% - var(--widthSquare) / 2);
+  animation: moveBefore 2000ms ease infinite;
+}
+.infinite-scroll::after {
+  left: 100%;
+  animation: moveAfter 2000ms ease infinite;
+}
+
+@keyframes moveBefore {
+  25% {
+    left: 0;
+  }
+  50% {
+    left: 0;
+  }
+  75% {
+    left: 0;
+  }
+  100% {
+    left: -30px;
+  }
+}
+@keyframes moveAfter {
+  25% {
+    left: 100%;
+  }
+  50% {
+    left: calc(100% - var(--widthSquare));
+  }
+  75% {
+    left: calc(100% - var(--widthSquare));
+  }
+  100% {
+    left: calc(50% - var(--widthSquare) / 2);
+  }
+}
