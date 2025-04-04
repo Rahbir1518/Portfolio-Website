@@ -24,7 +24,19 @@ const FeaturedProjects = () => {
           </span>
         </SpotlightCard>
 
-        <SpotlightCard className='bg-ternary/30 p-4 m-4' spotlightColor='#F8EFE0'> Test2</SpotlightCard>
+        <SpotlightCard className='bg-ternary/30 p-4 m-4' spotlightColor='#F8EFE0'>
+          
+          <h1 className='text-secondary font-primary text-lg mt-4'>
+            <a className="text-black cursor-none hover:underline" href="https://github.com/Rahbir1518/SnapNote"  target="_blank" rel="noopener noreferrer"> SnapNote | Python, Tkinter, PyTesseract</a>
+          </h1>
+
+          <span className='font-secondary'>Developed a feature-rich notebook application using Python and Tkinter, integrating a built-in dictionary powered by web scraping from Wiktionary.
+            Enhanced the app with OCR using PyTesseract and OpenCV, enabling text extraction from screenshots.
+            Automated screenshot organization with a custom Python script and designed a user-friendly GUI.
+            Optimized OCR accuracy through image preprocessing and improved window management for better performance.
+            Extended language support to 10 languages, provided the necessary font is available.
+          </span>
+        </SpotlightCard>
 
       </div>
     </SpotlightCard>
