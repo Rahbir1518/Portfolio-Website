@@ -1,36 +1,42 @@
-import React from 'react'
-import SpotlightCard from './SpotlightCard'
+import React from 'react';
+import SpotlightCard from './SpotlightCard';
 
 const Hero = () => {
   return (
-    <SpotlightCard className="div2 col-span-3 md:col-span-2 sm:col-span-1 bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl mt-10 p-4 ml-7">
-      
-      <h1 className="text-black text-4xl p-2 font-primary">Md Rahbir Mahdi</h1>
-      
-      <p className='font-secondary text-secondary p-2 inline-flex items-center'>
-        I am a Computer Science student at York University passionate about AI, computer vision, 
-        and human-computer interaction. Currently exploring deep learning, 
-        generative AI, and innovative web applications. 
-        Enthusiastic about building intelligent systems that enhance user experiences and push the boundaries of technology.
+    <SpotlightCard className="bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl w-full">
+      <h1 className="text-black text-4xl font-primary mb-4">Md Rahbir Mahdi</h1>
+
+      <p className="font-secondary text-secondary mb-6">
+        I’m a Computer Science student at York University passionate about AI, computer vision, and HCI. Exploring deep learning, generative AI, and cutting‑edge web applications—always pushing technology’s boundaries.
       </p>
 
-      <div className='flex flex-wrap gap-4 mt-6'>
-        <a className="border-2 cursor-none text-[#0d0705] hover:border-[#0d0705] hover:bg-greenYellow/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="src/assets/Resume.pdf" download="Resume.pdf">
+      <div className="flex flex-wrap gap-4">
+        <a
+          href="src/assets/Resume.pdf"
+          download
+          className="border-2 text-[#0d0705] hover:bg-greenYellow/70 px-4 py-2 rounded-2xl text-sm font-thin font-mono transition-colors hover:cursor-none"
+        >
           Resume
         </a>
-
-        <a className="border-2 cursor-none text-[#0d0705] hover:border-[#0d0705] hover:bg-greenYellow/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://www.linkedin.com/in/rahbirmahdi" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/rahbirmahdi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-2 text-[#0d0705] hover:bg-greenYellow/70 px-4 py-2 rounded-2xl text-sm font-thin font-mono transition-colors hover:cursor-none"
+        >
           LinkedIn
         </a>
-
-        <a className="border-2 cursor-none text-[#0d0705] hover:border-[#0d0705] hover:bg-greenYellow/70 hover:transition-colors hover:duration-300 font-thin font-mono px-4 py-2 rounded-2xl text-sm" href="https://github.com/Rahbir1518" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/Rahbir1518"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-2 text-[#0d0705] hover:bg-greenYellow/70 px-4 py-2 rounded-2xl text-sm font-thin font-mono transition-colors hover:cursor-none"
+        >
           GitHub
         </a>
-
       </div>
-
     </SpotlightCard>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
