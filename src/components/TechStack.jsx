@@ -19,7 +19,7 @@ const TechStack = () => {
                 <li>Python</li>
                 <li>Java</li>
                 <li>C</li>
-                <li>C+</li>
+                <li>C++</li>
                 <li>RISC-V Assembly</li>
                 <li>Verilog</li>
                 <li>JavaScript</li>
