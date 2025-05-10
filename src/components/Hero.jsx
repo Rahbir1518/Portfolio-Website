@@ -1,5 +1,6 @@
 import React from 'react';
 import SpotlightCard from './SpotlightCard';
+import resumePDF from '../assets/Resume.pdf';
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
 
       <div className="flex flex-wrap gap-4">
         <a
-          href="src/assets/Resume.pdf"
+          href={resumePDF}
           download
           className="border-2 text-[#0d0705] hover:bg-greenYellow/70 px-4 py-2 rounded-2xl text-sm font-thin font-mono transition-colors hover:cursor-none"
         >
