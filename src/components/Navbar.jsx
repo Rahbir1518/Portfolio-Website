@@ -46,7 +46,7 @@ const Navbar = () => {
         </button>
 
         <Link
-          to="/"
+          to="/Portfolio-Website"
           onClick={() => setMenuOpen(false)}
           className="font-bold font-secondary text-lg hover:underline cursor-none hover:cursor-none"
         >
