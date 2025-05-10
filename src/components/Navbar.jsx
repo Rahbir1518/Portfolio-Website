@@ -34,9 +34,9 @@ const Navbar = () => {
 
       <div
         className={`text-white fixed top-0 right-0 w-2/3 sm:w-1/2 h-screen bg-brownee shadow-lg flex flex-col items-start px-6 py-8 space-y-4 z-[9999] transform transition-transform duration-500 ${
-         menuOpen ? 'translate-x-0' : 'translate-x-full'
+          menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-       style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
+        style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
       >
         <button
           className="self-end text-2xl mb-4 cursor-none hover:cursor-none hover:text-gray-400"
