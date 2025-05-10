@@ -10,7 +10,7 @@ const Navbar = () => {
       <img src={logo} className="w-auto h-[60px]" alt="Logo" />
       <div className="hidden xl:flex gap-3">
         <Link
-          to="/Portfolio-Website"
+          to="/"
           className="text-black font-bold hover:text-greenYellow/60 cursor-none font-secondary pr-3"
         >
           Home
@@ -46,7 +46,7 @@ const Navbar = () => {
         </button>
 
         <Link
-          to="/Portfolio-Website"
+          to="/"
           onClick={() => setMenuOpen(false)}
           className="font-bold font-secondary text-lg hover:underline cursor-none hover:cursor-none"
         >
