@@ -27,7 +27,7 @@ function App() {
   }
 
   return (
-    <Router basename="/Portfolio-Website">
+    <Router basename="/">
       <div className="relative min-h-screen bg-black cursor-none overflow-auto">
         <div className="fixed inset-0 z-0">
           <Waves backgroundColor="white" lineColor="secondary" />
