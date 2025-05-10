@@ -3,11 +3,12 @@ import SpotlightCard from './SpotlightCard';
 
 const Hero = () => {
   return (
-    <SpotlightCard className="bg-primary/60 hover:bg-primary transition-colors duration-450 rounded-2xl w-full">
-      <h1 className="text-black text-4xl font-primary mb-4">Md Rahbir Mahdi</h1>
+    
+    <SpotlightCard className="bg-primary md:bg-primary/60 md:hover:bg-primary transition-colors duration-450 rounded-2xl w-full">
+      <h1 className="text-black text-4xl font-primary mb-4">Md Rahbir Mahdi</h1>
 
-      <p className="font-secondary text-secondary mb-6">
-        I’m a Computer Science student at York University passionate about AI, computer vision, and HCI. Exploring deep learning, generative AI, and cutting‑edge web applications—always pushing technology’s boundaries.
+      <p className="font-secondary text-secondary pb-3">
+        I'm a Computer Science student at York University with a strong interest in AI, computer vision, and human-computer interaction. Lately, I've been learning more about deep learning, generative AI, and building modern web apps.
       </p>
 
       <div className="flex flex-wrap gap-4">
