@@ -10,7 +10,7 @@ const Navbar = () => {
       <img src={logo} className="w-auto h-[60px]" alt="Logo" />
       <div className="hidden xl:flex gap-3">
         <Link
-          to="/"
+          to="/Portfolio-Website"
           className="text-black font-bold hover:text-greenYellow/60 cursor-none font-secondary pr-3"
         >
           Home
