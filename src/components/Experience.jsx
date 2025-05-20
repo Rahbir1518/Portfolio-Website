@@ -22,10 +22,12 @@ const Experience = () => {
           </h1>
           
           <ul className='font-secondary'>
-            <li>-Collaborated in a startup focused on leveraging AI and machine learning for personalized fashion recommendations</li>
-            <li>-Led the development of an AI-based recommendation engine utilizing TensorFlow, Hugging Face, and OpenAI CLIP</li>
-            <li>-Led efforts in data collection and preprocessing</li>
-            <li>-Managed large-scale data storage using PostgreSQL, MySQL, and MongoDB</li>
+            <li>-Developed an AI-based fashion recommender using TensorFlow, Hugging Face, and OpenAI CLIP.</li>
+            <li>-Increased outfit match accuracy by 3x by aligning recommendations with cultural and body-type contexts.</li>
+            <li>-Scraped 100K+ fashion data entries using BeautifulSoup, Scrapy, and Selenium.</li>
+            <li>-Reduced preprocessing time by 40% with custom data cleaning scripts in Python.</li>
+            <li>-Improved query efficiency by 50% through optimized indexing and data normalization.</li>
+            <li>-Led model tuning, dataset engineering, and system architecture for deployment readiness.</li>
           </ul>
         </SpotlightCard>
 
@@ -42,9 +44,13 @@ const Experience = () => {
           
           </h1>
           <ul className='font-secondary'>
-            <li>-Designed and developed responsive websites and web applications for individuals using technologies like React, Next.js, Tailwind CSS, etc.</li>
-            <li>-Collaborated with clients to gather requirements, deliver customized solutions</li>
-            <li>-Integrated third-party APIs and backend services to deliver dynamic, data-driven experiences</li>
+            <li>-Delivered responsive client websites using React, Next.js, and Tailwind CSS.</li>
+            <li>-Boosted page speed by up to 40% via image optimization, lazy loading, and code splitting.</li>
+            <li>-Integrated APIs (Google Maps, Stripe, Auth0) to enable real-time interactivity.</li>
+            <li>-Enhanced SEO and accessibility (WCAG 2.1) across all projects.</li>
+            <li>-Maintained projects post-launch with bug fixes, analytics integration, and performance tracking.</li>
+            <li>-Fixed bugs and tracked performance after launch with analytics tools.</li>
+            <li>-Set up GitHub Actions for automated builds and deploys, cutting release time by 75%.</li>
           </ul>
 
         </SpotlightCard>
