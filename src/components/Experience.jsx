@@ -14,6 +14,31 @@ const Experience = () => {
         <SpotlightCard className='bg-ternary/30 p-4 mt-4' spotlightColor='#F8EFE0'>
           <h1 className='text-secondary font-primary text-lg pb-2'>
             <a
+              className="text-black cursor-none hover:underline"
+              href="https://devpost.com/software/vroomi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vroomi (SpurHacks 2025 – 3rd Place Winner)<br/>
+              <a>Jun. 2025</a>
+            </a>
+          
+          </h1>
+          <ul className='font-secondary'>
+            <li>-Built a campus ride-sharing web app that matched students via geolocation and auto-split ride costs with real-time pricing.</li>
+            <li>-Engineered responsive UI with React and TailwindCSS; Added scroll animations and resolved 15+ UI bugs.</li>
+            <li>-Designed and developed the Driver Dashboard to display trips, earnings, and passenger data.</li>
+            <li>-Integrated Supabase for real-time syncing of ride data across 3 views.</li>
+            <li>-Supported route optimization by implementing algorithms based on the Travelling Postman Problem.</li>
+            <li>-Connected Stripe Checkout to enable secure payments and dynamic gas cost-splitting by vehicle type.</li>
+            <li>-Deployed full-stack app on Vercel, ensuring seamless integration and zero demo-time bugs.</li>
+          </ul>
+
+        </SpotlightCard>
+
+        <SpotlightCard className='bg-ternary/30 p-4 mt-4' spotlightColor='#F8EFE0'>
+          <h1 className='text-secondary font-primary text-lg pb-2'>
+            <a
               className="cursor-none hover:underline"
             >
               FashionIQ  |  Co-Founder & Developer<br/>
@@ -39,7 +64,8 @@ const Experience = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Freelance Web Developer
+              Freelance Web Developer<br/>
+              <a>Apr. 2025 – Present</a>
             </a>
           
           </h1>
