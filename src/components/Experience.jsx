@@ -19,6 +19,30 @@ const Experience = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
+              Islamic Center of Markham - Masjid Darul Iman (Computer Systems Analyst)<br/>
+              <a>Jul. 2025-Aug. 2025</a>
+            </a>
+          
+          </h1>
+          <ul className='font-secondary'>
+            <li>-Developed a community-facing mobile app using React Native (Expo), designed to serve 1,000+ congregation members with real-time access to announcements, events, and prayer timings.</li>
+            <li>-Implemented push notifications, live data syncing, and a polished UI to improve user engagement and accessibility.</li>
+            <li>-Built a full-stack volunteer scheduling web platform using React.js and Supabase, designed to streamline coordination of 250+ volunteers across weekly events.</li>
+            <li>-Integrated Supabase Auth with a PostgreSQL database, enabling secure login, role-based permissions, and full CRUD operations.</li>
+            <li>-Created scalable RESTful APIs, automated volunteer onboarding workflows, and responsive layouts for use across desktop and mobile.</li>
+            <li>-Collaborated with administrative staff to translate manual scheduling processes into digital workflows, reducing coordination time and errors.</li>
+          </ul>
+
+        </SpotlightCard>
+
+        <SpotlightCard className='bg-ternary/30 p-4 mt-4' spotlightColor='#F8EFE0'>
+          <h1 className='text-secondary font-primary text-lg pb-2'>
+            <a
+              className="text-black cursor-none hover:underline"
+              href="https://devpost.com/software/vroomi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Vroomi (SpurHacks 2025 – 3rd Place Winner)<br/>
               <a>Jun. 2025</a>
             </a>
