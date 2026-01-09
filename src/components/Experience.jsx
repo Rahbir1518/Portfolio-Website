@@ -15,7 +15,7 @@ const Experience = () => {
           <h1 className='text-secondary font-primary text-lg pb-2'>
             <a
               className="text-black cursor-none hover:underline"
-              href="https://devpost.com/software/vroomi"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
