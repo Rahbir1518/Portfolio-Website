@@ -4,13 +4,15 @@ export default function Projects() {
       title: "Vroomi",
       badge: "3rd Place",
       description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
-      tags: ["React", "TypeScript", "Supabase", "Stripe"]
+      tags: ["React", "TypeScript", "Supabase", "Stripe"],
+      link:"https://devpost.com/software/vroomi"
     },
     {
       title: "Mimicoo",
       badge: "6th Place",
       description: "Infant babble analysis tool using MediaPipe and Librosa. Features Gemini API integration for speech disorder risk analysis.",
-      tags: ["Python", "MediaPipe", "Gemini API", "FastAPI"]
+      tags: ["Python", "MediaPipe", "Gemini API", "FastAPI"],
+      link:"https://devpost.com/software/mimicoo"
     },
     {
       title: "SproutTale",
@@ -33,7 +35,12 @@ export default function Projects() {
         
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card cursor-hover">
+            <a key={index} 
+              href={project.link}
+              target="_blank"
+              
+              className="project-card cursor-clickable"
+              style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
                 <span className="project-badge">{project.badge}</span>
@@ -44,7 +51,7 @@ export default function Projects() {
                   <span key={i} className="tag">{tag}</span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

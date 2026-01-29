@@ -15,7 +15,7 @@ export function Hero() {
           <div className="hero-meta">
             <div className="meta-item">
               <span className="meta-label">Email</span>
-              <a href="mailto:rahbir1518@gmail.com" className="meta-value cursor-hover">rahbir1518@gmail.com</a>
+              <a href="mailto:rahbir1518@gmail.com" className="meta-value cursor-clickable">rahbir1518@gmail.com</a>
             </div>
             <div className="meta-item">
               <span className="meta-label">Location</span>
@@ -30,9 +30,9 @@ export function Hero() {
         
         <div className="hero-sectors">
           <a href="#exp" className="sector-link cursor-clickable">Experience</a>
-          <a href="#projects" className="sector-link cursor-hover">Projects</a>
-          <a href="#skills" className="sector-link cursor-hover">Skills</a>
-          <a href="#art" className="sector-link cursor-hover">Art</a>
+          <a href="#projects" className="sector-link cursor-clickable">Projects</a>
+          <a href="#skills" className="sector-link cursor-clickable">Skills</a>
+          <a href="#art" className="sector-link cursor-clickable">Art</a>
         </div>
       </div>
     </section>
