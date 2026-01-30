@@ -6,7 +6,7 @@ export default function Projects() {
       description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
       tags: ["React", "TypeScript", "Supabase", "Stripe"],
       link: "https://devpost.com/software/vroomi",
-      image: "/images/vroomi.jpg" // Place in public/images/
+      image: "images/vroomi.jpg" // Place in public/images/
     },
     {
       title: "Mimicoo",
@@ -14,7 +14,7 @@ export default function Projects() {
       description: "Infant babble analysis tool using MediaPipe and Librosa. Features Gemini API integration for speech disorder risk analysis.",
       tags: ["Python", "MediaPipe", "Gemini API", "FastAPI"],
       link: "https://devpost.com/software/mimicoo",
-      image: "/images/mimicoo.jpg"
+      image: "images/mimicoo.jpg"
     },
     {
       title: "Nervy",
@@ -22,7 +22,7 @@ export default function Projects() {
       description: "AI behavioral interview coach delivering real-time video feedback on eye contact, posture, and confidence via MediaPipe/OpenCV.",
       tags: ["FastAPI", "MediaPipe", "OpenCV", "Gemini API", "WebSockets"],
       link: "https://devpost.com/software/nervy",
-      image: "/images/nervy.jpg"
+      image: "images/nervy.jpg"
     }
   ];
 

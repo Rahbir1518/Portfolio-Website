@@ -1,10 +1,10 @@
 export function Art() {
   const artworks = [
-    { id: 1, src: "/images/cat.png", title: "Rainy Night", span: "wide" },
-    { id: 2, src: "/images/guitar.jpg", title: "Nostalgia" },
-    { id: 3, src: "/images/lantern.jpg", title: "Lantern Light" },
-    { id: 4, src: "/images/railroad.jpg", title: "The Crossing" },
-    { id: 5, src: "/images/violin.jpg", title: "Melody" },
+    { id: 1, src: "images/cat.png", title: "Rainy Night", span: "wide" },
+    { id: 2, src: "images/guitar.jpg", title: "Nostalgia" },
+    { id: 3, src: "images/lantern.jpg", title: "Lantern Light" },
+    { id: 4, src: "images/railroad.jpg", title: "The Crossing" },
+    { id: 5, src: "images/violin.jpg", title: "Melody" },
   ];
 
   return (
