@@ -21,6 +21,7 @@ export function Experience() {
                 <li>Implemented push notifications via OneSignal and live data syncing with Supabase</li>
                 <li>Engineered full-stack Volunteer Scheduling platform using React.js and Supabase for 250+ volunteers</li>
                 <li>Integrated secure Supabase Auth with PostgreSQL and role-based access control</li>
+                <li>Created scalable RESTful APIs, automated volunteer onboarding workflows, and responsive layouts for use across desktop and mobile.</li>
               </ul>
             </div>
           </div>

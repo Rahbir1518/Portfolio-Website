@@ -4,19 +4,25 @@ export default function Projects() {
       title: "Vroomi",
       badge: "3rd Place",
       description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
-      tags: ["React", "TypeScript", "Supabase", "Stripe"]
+      tags: ["React", "TypeScript", "Supabase", "Stripe"],
+      link: "https://devpost.com/software/vroomi",
+      image: "/images/vroomi.jpg" // Place in public/images/
     },
     {
       title: "Mimicoo",
       badge: "6th Place",
       description: "Infant babble analysis tool using MediaPipe and Librosa. Features Gemini API integration for speech disorder risk analysis.",
-      tags: ["Python", "MediaPipe", "Gemini API", "FastAPI"]
+      tags: ["Python", "MediaPipe", "Gemini API", "FastAPI"],
+      link: "https://devpost.com/software/mimicoo",
+      image: "/images/mimicoo.jpg"
     },
     {
-      title: "SproutTale",
-      badge: "Participant",
-      description: "Gamified reading platform with AI-driven recommendations. Interactive leveling system with XP-based sprite evolution.",
-      tags: ["React.js", "MongoDB", "Gemini API"]
+      title: "Nervy",
+      badge: "Hackathon Project",
+      description: "AI behavioral interview coach delivering real-time video feedback on eye contact, posture, and confidence via MediaPipe/OpenCV.",
+      tags: ["FastAPI", "MediaPipe", "OpenCV", "Gemini API", "WebSockets"],
+      link: "https://devpost.com/software/nervy",
+      image: "/images/nervy.jpg"
     }
   ];
 
@@ -33,18 +39,37 @@ export default function Projects() {
         
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card cursor-hover">
-              <div className="project-header">
-                <h3 className="project-title">{project.title}</h3>
-                <span className="project-badge">{project.badge}</span>
+            <a 
+              key={index} 
+              href={project.link}
+              target="_blank"
+              className="project-card cursor-clickable"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              {/* Image Container */}
+              <div className="project-image-wrapper">
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} screenshot`} 
+                  className="project-image"
+                  loading="lazy"
+                />
+                <div className="project-image-overlay" />
               </div>
-              <p className="project-desc">{project.description}</p>
-              <div className="project-tags">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="tag">{tag}</span>
-                ))}
+              
+              <div className="project-content">
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
+                  <span className="project-badge">{project.badge}</span>
+                </div>
+                <p className="project-desc">{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="tag">{tag}</span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

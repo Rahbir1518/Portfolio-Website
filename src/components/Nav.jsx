@@ -12,7 +12,7 @@ export function Nav() {
 
   return (
     <nav className={scrolled ? 'scrolled' : ''}>
-      <a href="#" className="logo cursor-hover">RM.</a>
+      <a href="#" className="logo cursor-clickable">RM.</a>
       
       <button 
         className="mobile-menu-btn" 
@@ -24,10 +24,10 @@ export function Nav() {
       </button>
 
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li><a href="#exp" className="cursor-hover" onClick={() => setIsOpen(false)}>Experience</a></li>
-        <li><a href="#projects" className="cursor-hover" onClick={() => setIsOpen(false)}>Projects</a></li>
-        <li><a href="#skills" className="cursor-hover" onClick={() => setIsOpen(false)}>Skills</a></li>
-        <li><a href="#art" className="cursor-hover" onClick={() => setIsOpen(false)}>Art</a></li>
+        <li><a href="#exp" className="cursor-clickable" onClick={() => setIsOpen(false)}>Experience</a></li>
+        <li><a href="#projects" className="cursor-clickable" onClick={() => setIsOpen(false)}>Projects</a></li>
+        <li><a href="#skills" className="cursor-clickable" onClick={() => setIsOpen(false)}>Skills</a></li>
+        <li><a href="#art" className="cursor-clickable" onClick={() => setIsOpen(false)}>Art</a></li>
       </ul>
     </nav>
   );

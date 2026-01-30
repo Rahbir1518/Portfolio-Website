@@ -29,10 +29,13 @@ export function Skills() {
               <span className="skill-tag">ReactJS</span>
               <span className="skill-tag">React Native</span>
               <span className="skill-tag">Next.js</span>
+              <span className="skill-tag">Three.js</span>
               <span className="skill-tag">Tailwind CSS</span>
               <span className="skill-tag">MediaPipe</span>
               <span className="skill-tag">OpenCV</span>
               <span className="skill-tag">TensorFlow</span>
+              {/* <span className="skill-tag">Pandas</span>
+              <span className="skill-tag">Numpy</span> */}
             </div>
           </div>
           
@@ -41,7 +44,9 @@ export function Skills() {
             <div className="skill-items">
               <span className="skill-tag">Git</span>
               <span className="skill-tag">Supabase</span>
+              <span className="skill-tag">MongoDB</span>
               <span className="skill-tag">Google Cloud</span>
+              <span className="skill-tag">Firebase</span>
               <span className="skill-tag">VS Code</span>
               <span className="skill-tag">Figma</span>
               <span className="skill-tag">GitHub Actions</span>
