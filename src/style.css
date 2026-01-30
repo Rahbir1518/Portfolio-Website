@@ -578,6 +578,143 @@ section {
     gap: 0.5rem;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column; /* Stack image above content */
+  padding: 0; /* Remove padding, handle inside content */
+  overflow: hidden; /* Keep image corners rounded */
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* Consistent widescreen ratio */
+  overflow: hidden;
+  background: var(--bg-tertiary); /* Loading placeholder color */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area without distortion */
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.project-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, rgba(18, 16, 14, 0.8) 100%);
+  pointer-events: none;
+}
+
+.project-content {
+  padding: 2rem; /* Move original padding here */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .project-image-wrapper {
+    aspect-ratio: 4/3; /* Taller on mobile */
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+}
+
+.art-grid-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  grid-auto-rows: auto; /* Height determined by image aspect ratio */
+  gap: 1.5rem;
+  align-items: start; /* Prevents stretching to match tallest item */
+}
+
+.art-item {
+  aspect-ratio: auto !important; /* Kill the forced square */
+  height: auto !important; /* Let it grow with image */
+}
+
+.art-image {
+  width: 100%;
+  height: auto; /* Natural height */
+  object-fit: contain !important; /* Never crop */
+  display: block;
+}
+
+/* Remove row-span if it exists from old CSS */
+.art-item:nth-child(1) {
+  grid-row: auto !important; /* Don't force double height */
+  aspect-ratio: auto !important;
+}
+
+/* Cat.png is wide landscape (1080x566) - make it span 2 columns */
+.art-item.wide {
+  grid-column: span 2;
+}
+
+/* Images display at natural aspect ratio */
+
+.art-item:hover .art-image {
+  transform: scale(1.02); /* Subtle zoom without cropping */
+}
+
+/* Overlay stays at bottom */
+.art-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(18,16,14,0.95) 0%, rgba(18,16,14,0) 100%);
+  padding: 2rem 1.5rem 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.art-item:hover .art-overlay {
+  opacity: 1;
+}
+
+.art-caption {
+  color: var(--cream);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Tablet: 2 columns, wide items span 2 */
+@media (max-width: 1024px) {
+  .art-grid-masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .art-item.wide {
+    grid-column: span 2; /* Cat stays wide on tablet */
+  }
+}
+
+/* Mobile: Single column, everything natural width */
+@media (max-width: 767px) {
+  .art-grid-masonry {
+    grid-template-columns: 1fr;
+  }
+  
+  .art-item.wide {
+    grid-column: span 1; /* Stack normally on mobile */
+  }
+}
+
 .tag {
     font-size: 0.75rem;
     color: var(--cream-muted);
