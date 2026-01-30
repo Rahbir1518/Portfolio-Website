@@ -16,7 +16,7 @@ export function Footer() {
           <a href="https://devpost.com/Rahbir1518?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" className="cursor-clickable">
           Devpost
           </a>
-          <a href="/resume.pdf" download={"Md_Rahbir_Mahdi_Resume.pdf"} className="cursor-clickable">
+          <a href="resume.pdf" download={"Md_Rahbir_Mahdi_Resume.pdf"} className="cursor-clickable">
           Resume
           </a>
         </div>
