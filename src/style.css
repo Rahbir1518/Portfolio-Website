@@ -104,7 +104,9 @@ nav {
     align-items: center;
     z-index: 1000;
     /* mix-blend-mode: difference; */
-    transition: background 0.3s, backdrop-filter 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    transition: background 0.3s, backdrop-filter 0.3s, opacity 0.4s ease;
 }
 
 nav.scrolled {
@@ -112,6 +114,8 @@ nav.scrolled {
     backdrop-filter: blur(12px);
     /* mix-blend-mode: normal; */
     border-bottom: 1px solid var(--border);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .logo {
