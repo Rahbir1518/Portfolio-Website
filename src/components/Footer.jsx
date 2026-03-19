@@ -1,4 +1,5 @@
 export function Footer() {
+  const base = import.meta.env.BASE_URL;
   return (
     <footer>
       <div className="footer-content">
@@ -16,7 +17,7 @@ export function Footer() {
           <a href="https://devpost.com/Rahbir1518?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" className="cursor-clickable">
           Devpost
           </a>
-          <a href="/resume.pdf" download={"Md_Rahbir_Mahdi_Resume.pdf"} className="cursor-clickable">
+          <a href={`${base}resume.pdf`} download={"Md_Rahbir_Mahdi_Resume.pdf"} className="cursor-clickable">
           Resume
           </a>
         </div>
