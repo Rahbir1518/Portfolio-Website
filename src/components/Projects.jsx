@@ -1,13 +1,14 @@
 export default function Projects() {
   const projects = [
     {
-      title: "Vroomi",
-      badge: "3rd Place",
-      description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
-      tags: ["React", "TypeScript", "Supabase", "Stripe"],
-      link: "https://devpost.com/software/vroomi",
-      image: "/images/vroomi.jpg" // Place in public/images/
+      title: "Clarus",
+      badge: "Vivirion + Google",
+      description: "Automate every step of your clinical workflow.",
+      tags: ["FastAPI", "Next.js", "React Flow", "ElevenLabs", "Twilio", "Supabase"],
+      link: "https://devpost.com/software/clarus-7werym",
+      image: "/images/Clarus.jpg"
     },
+    
     {
       title: "Mimicoo",
       badge: "6th Place",
@@ -17,13 +18,23 @@ export default function Projects() {
       image: "/images/mimicoo.jpg"
     },
     {
+      title: "Vroomi",
+      badge: "3rd Place",
+      description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
+      tags: ["React", "TypeScript", "Supabase", "Stripe"],
+      link: "https://devpost.com/software/vroomi",
+      image: "/images/vroomi.jpg" // Place in public/images/
+    },
+    
+    {
       title: "Nervy",
       badge: "Hackathon Project",
       description: "AI behavioral interview coach delivering real-time video feedback on eye contact, posture, and confidence via MediaPipe/OpenCV.",
       tags: ["FastAPI", "MediaPipe", "OpenCV", "Gemini API", "WebSockets"],
       link: "https://devpost.com/software/nervy",
       image: "/images/nervy.jpg"
-    }
+    },
+
   ];
 
   return (
