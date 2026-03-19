@@ -1,10 +1,11 @@
 export function Art() {
+  const base = import.meta.env.BASE_URL;
   const artworks = [
-    { id: 1, src: "/images/cat.png", title: "Rainy Night", span: "wide" },
-    { id: 2, src: "/images/guitar.jpg", title: "Nostalgia" },
-    { id: 3, src: "/images/lantern.jpg", title: "Lantern Light" },
-    { id: 4, src: "/images/railroad.jpg", title: "The Crossing" },
-    { id: 5, src: "/images/violin.jpg", title: "Melody" },
+    { id: 1, src: `${base}/images/cat.png`, title: "Rainy Night", span: "wide" },
+    { id: 2, src: `${base}/images/guitar.jpg`, title: "Nostalgia" },
+    { id: 3, src: `${base}/images/lantern.jpg`, title: "Lantern Light" },
+    { id: 4, src: `${base}/images/railroad.jpg`, title: "The Crossing" },
+    { id: 5, src: `${base}/images/violin.jpg`, title: "Melody" },
   ];
 
   return (

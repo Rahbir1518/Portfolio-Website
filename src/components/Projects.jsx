@@ -1,4 +1,5 @@
 export default function Projects() {
+  const base = import.meta.env.BASE_URL;
   const projects = [
     {
       title: "Clarus",
@@ -6,7 +7,7 @@ export default function Projects() {
       description: "Automate every step of your clinical workflow.",
       tags: ["FastAPI", "Next.js", "React Flow", "ElevenLabs", "Twilio", "Supabase"],
       link: "https://devpost.com/software/clarus-7werym",
-      image: "/images/Clarus.jpg"
+      image: `${base}/images/Clarus.jpg`
     },
     
     {
@@ -15,7 +16,7 @@ export default function Projects() {
       description: "Infant babble analysis tool using MediaPipe and Librosa. Features Gemini API integration for speech disorder risk analysis.",
       tags: ["Python", "MediaPipe", "Gemini API", "FastAPI"],
       link: "https://devpost.com/software/mimicoo",
-      image: "/images/mimicoo.jpg"
+      image: `${base}/images/mimicoo.jpg`
     },
     {
       title: "Vroomi",
@@ -23,7 +24,7 @@ export default function Projects() {
       description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
       tags: ["React", "TypeScript", "Supabase", "Stripe"],
       link: "https://devpost.com/software/vroomi",
-      image: "/images/vroomi.jpg" // Place in public/images/
+      image: `${base}/images/vroomi.jpg` // Place in public/images/
     },
     
     {
@@ -32,7 +33,7 @@ export default function Projects() {
       description: "AI behavioral interview coach delivering real-time video feedback on eye contact, posture, and confidence via MediaPipe/OpenCV.",
       tags: ["FastAPI", "MediaPipe", "OpenCV", "Gemini API", "WebSockets"],
       link: "https://devpost.com/software/nervy",
-      image: "/images/nervy.jpg"
+      image: `${base}/images/nervy.jpg`
     },
 
   ];
