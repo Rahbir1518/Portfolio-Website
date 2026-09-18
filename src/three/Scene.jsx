@@ -19,14 +19,15 @@ export function Scene() {
     containerRef.current.appendChild(renderer.domElement);
 
     const colors = [
-      new THREE.Color(0x8b6f47),
-      new THREE.Color(0xd4a574),
-      new THREE.Color(0xf5f1e8),
-      new THREE.Color(0xa88b6a)
+      new THREE.Color(0x7B6348),
+      new THREE.Color(0x8E7355),
+      new THREE.Color(0xA88663),
+      new THREE.Color(0xC9A77A),
+      new THREE.Color(0x5F4B39)
     ];
 
-    const width = 100;
-    const depth = 100;
+    const width = 80;
+    const depth = 80;
     const count = width * depth;
     const positions = new Float32Array(count * 3);
     const colorsArray = new Float32Array(count * 3);
@@ -118,7 +119,7 @@ export function Scene() {
 
     const lineGeometry = new THREE.BufferGeometry();
     const lineMaterial = new THREE.LineBasicMaterial({ 
-      color: 0x8b6f47, transparent: true, opacity: 0.1 
+      color: 0x9A7A5A, transparent: true, opacity: 0.12 
     });
     lineGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(count * 6), 3));
     const lines = new THREE.LineSegments(lineGeometry, lineMaterial);

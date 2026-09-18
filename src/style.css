@@ -265,8 +265,9 @@ nav.scrolled {
     color: var(--cream-muted);
     max-width: 500px;
     line-height: 1.6;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
     margin-bottom: 2rem;
 }
 
