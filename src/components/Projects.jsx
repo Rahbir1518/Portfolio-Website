@@ -3,7 +3,9 @@ export default function Projects() {
   const projects = [
     {
       title: "Clarus",
-      badge: "Winner • HackCanada 2026 • Vivirion + Google",
+      event: "HackCanada 2026",
+      winner: true,
+      tracks: ["Vivirion Solutions", "Google"],
       description: "Automate every step of your clinical workflow.",
       tags: ["Healthcare AI", "FastAPI", "Workflow Design", "Twilio", "Voice Automation", "Supabase"],
       link: "https://devpost.com/software/clarus-7werym",
@@ -11,7 +13,9 @@ export default function Projects() {
     },
     {
       title: "Mimicoo",
-      badge: "Winner • 6th Place • Hack the Valley 2025",
+      event: "Hack the Valley 2025",
+      winner: true,
+      placement: "6th Place",
       description: "Infant babble analysis tool using MediaPipe and Librosa. Features Gemini API integration for speech disorder risk analysis.",
       tags: ["Audio ML", "MediaPipe", "Speech Analysis", "Python", "FastAPI", "Gemini API"],
       link: "https://devpost.com/software/mimicoo",
@@ -19,15 +23,25 @@ export default function Projects() {
     },
     {
       title: "Vroomi",
-      badge: "Winner • 3rd Place • Hack the Valley 2025",
+      event: "Hack the Valley 2025",
+      winner: true,
+      placement: "3rd Place",
       description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
       tags: ["Geolocation", "Optimization", "React", "TypeScript", "Supabase", "Stripe"],
       link: "https://devpost.com/software/vroomi",
       image: `${base}/images/vroomi.jpg` // Place in public/images/
     },
     {
+      title: "Hampy",
+      event: "Hack the North 2026",
+      description: "Voice-driven BracketBot robot picker for food banks. Combines BB-SLAM mapping and localization for autonomous navigation, a YOLOv8 detector trained on the demo items, and Meta Quest 3 hand-tracking teleoperation to record demonstrations for a learned pick. One validated request runs the full pipeline: navigate, detect, pick, deliver, release.",
+      tags: ["BB-SLAM", "YOLOv8", "Object Detection", "Model Training", "Robotics", "FastAPI"],
+      link: "https://devpost.com/software/hampy",
+      image: `${base}/images/HTN.jpg`
+    },
+    {
       title: "Numen",
-      badge: "GenAI Genesis 2026",
+      event: "GenAI Genesis 2026",
       description: "AI-powered team knowledge automation that answers engineering questions from code, docs, and past conversations with traceable sources.",
       tags: ["AI Search", "Knowledge Graph", "RAG", "FastAPI", "Next.js", "Gemini API"],
       link: "https://devpost.com/software/numen-9l43wx",
@@ -35,7 +49,7 @@ export default function Projects() {
     },
     {
       title: "Corpus",
-      badge: "Hack the 6ix 2026",
+      event: "Hack the 6ix 2026",
       description: "Persistent cross-tool project memory for AI coding agents, letting sessions resume with relevant context instead of re-deriving everything.",
       tags: ["MCP", "AI Memory", "Supabase", "Graphify", "PostgreSQL", "Next.js"],
       link: "https://devpost.com/software/corpus-ixosp5",
@@ -43,7 +57,7 @@ export default function Projects() {
     },
     {
       title: "DWS",
-      badge: "CXC 2026 - AI Hackathon",
+      event: "CXC 2026 - AI Hackathon",
       description: "Voice-first indoor navigation assistant that helps visually impaired users navigate buildings using camera input, AI reasoning, and spoken guidance.",
       tags: ["Computer Vision", "Mobile Camera", "Accessibility", "YOLO", "Gemini Vision", "ElevenLabs"],
       link: "https://devpost.com/software/dws-4z1rot",
@@ -51,13 +65,12 @@ export default function Projects() {
     },
     {
       title: "Nervy",
-      badge: "HackHive 2026",
+      event: "HackHive 2026",
       description: "AI behavioral interview coach delivering real-time video feedback on eye contact, posture, and confidence via MediaPipe/OpenCV.",
       tags: ["OpenCV", "MediaPipe", "WebSockets", "Computer Vision", "FastAPI", "AI Coaching"],
       link: "https://devpost.com/software/nervy",
       image: `${base}/images/nervy.jpg`
     },
-
   ];
 
   return (
@@ -82,19 +95,38 @@ export default function Projects() {
             >
               {/* Image Container */}
               <div className="project-image-wrapper">
-                <img 
-                  src={project.image} 
-                  alt={`${project.title} screenshot`} 
-                  className="project-image"
-                  loading="lazy"
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="project-image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="project-image-placeholder" aria-hidden="true">
+                    {project.title}
+                  </div>
+                )}
                 <div className="project-image-overlay" />
               </div>
-              
+
               <div className="project-content">
                 <div className="project-header">
+                  {project.event && <span className="project-event">{project.event}</span>}
                   <h3 className="project-title">{project.title}</h3>
-                  <span className="project-badge">{project.badge}</span>
+                  {(project.winner || project.placement) && (
+                    <div className="project-awards">
+                      {project.winner && <span className="award-pill award-pill--winner">Winner</span>}
+                      {project.placement && <span className="award-pill">{project.placement}</span>}
+                    </div>
+                  )}
+                  {project.tracks && (
+                    <div className="project-awards">
+                      {project.tracks.map((track, i) => (
+                        <span key={i} className="award-pill">{track}</span>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <p className="project-desc">{project.description}</p>
                 <div className="project-tags">

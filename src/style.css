@@ -546,11 +546,10 @@ section {
 
 .project-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
     margin-bottom: 1rem;
-    gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .project-title {
@@ -560,14 +559,36 @@ section {
     margin: 0;
 }
 
-.project-badge {
+.project-event {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--coffee);
+}
+
+.project-awards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.award-pill {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    padding: 0.25rem 0.7rem;
     background: rgba(212, 165, 116, 0.1);
     color: var(--accent);
     border: 1px solid var(--accent);
     border-radius: 20px;
-    white-space: nowrap;
+}
+
+.award-pill--winner {
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-weight: 600;
 }
 
 .project-desc {
@@ -607,6 +628,19 @@ section {
 
 .project-card:hover .project-image {
   transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  color: var(--border);
+  background: var(--bg-tertiary);
 }
 
 .project-image-overlay {

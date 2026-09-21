@@ -1,17 +1,17 @@
+const sectors = ['EXPERIENCE', 'PROJECTS', 'SKILLS', 'ART'];
+
+// Four repeats: the animation scrolls -50%, so each half must be wider than the viewport.
+const items = Array.from({ length: 4 }, () => sectors).flat();
+
 export function Marquee() {
   return (
     <div className="marquee-container">
       <div className="marquee-content">
-        <span className="marquee-item">SECTOR 01 — ABOUT</span>
-        <span className="marquee-item">SECTOR 02 — EXPERIENCE</span>
-        <span className="marquee-item">SECTOR 03 — PROJECTS</span>
-        <span className="marquee-item">SECTOR 04 — SKILLS</span>
-        <span className="marquee-item">SECTOR 05 — ART</span>
-        <span className="marquee-item">SECTOR 01 — ABOUT</span>
-        <span className="marquee-item">SECTOR 02 — EXPERIENCE</span>
-        <span className="marquee-item">SECTOR 03 — PROJECTS</span>
-        <span className="marquee-item">SECTOR 04 — SKILLS</span>
-        <span className="marquee-item">SECTOR 05 — ART</span>
+        {items.map((name, i) => (
+          <span key={i} className="marquee-item">
+            SECTOR {String((i % sectors.length) + 1).padStart(2, '0')} — {name}
+          </span>
+        ))}
       </div>
     </div>
   );

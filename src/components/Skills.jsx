@@ -3,7 +3,7 @@ export function Skills() {
     <section id="skills">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-number">04</div>
+          <div className="section-number">03</div>
           <div className="section-title-block">
             <h2>Toolkit</h2>
             <p>Technologies & tools I work with</p>

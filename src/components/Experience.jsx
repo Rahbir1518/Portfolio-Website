@@ -3,7 +3,7 @@ export function Experience() {
     <section id="exp" className="experience-section">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-number">02</div>
+          <div className="section-number">01</div>
           <div className="section-title-block">
             <h2>Experience</h2>
             <p>Building software that serves communities and scales impact</p>
