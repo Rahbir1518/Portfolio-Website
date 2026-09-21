@@ -77,7 +77,7 @@ export default function Projects() {
     <section id="projects" style={{ background: 'var(--bg-secondary)' }}>
       <div className="section-container">
         <div className="section-header">
-          <div className="section-number">03</div>
+          <div className="section-number">02</div>
           <div className="section-title-block">
             <h2>Hackathons</h2>
             <p>Building under pressure, winning with innovation</p>
