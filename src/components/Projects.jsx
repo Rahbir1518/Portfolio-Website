@@ -40,6 +40,15 @@ export default function Projects() {
       image: `${base}/images/HTN.jpg`
     },
     {
+      title: "ZZZ Personalized Tracker",
+      event: "Personal Project",
+      stat: "4.1k views on launch",
+      description: "Desktop app for Zenless Zone Zero that syncs your HoYoLAB roster and cross-references it against Prydwen build recommendations, showing which teams you can field, how far each build is from the recommended setup, and what to farm next. Cookies are encrypted with Windows DPAPI, and syncs are rate-limited.",
+      tags: ["Electron", "React", "TypeScript", "FastAPI", "SQLite", "Python"],
+      link: "https://github.com/Rahbir1518/ZZZ_Personalized_Tracker",
+      image: `${base}/images/zzz.png`
+    },
+    {
       title: "Numen",
       event: "GenAI Genesis 2026",
       description: "AI-powered team knowledge automation that answers engineering questions from code, docs, and past conversations with traceable sources.",
@@ -79,7 +88,7 @@ export default function Projects() {
         <div className="section-header">
           <div className="section-number">02</div>
           <div className="section-title-block">
-            <h2>Hackathons</h2>
+            <h2>Hackathons/Projects</h2>
             <p>Building under pressure, winning with innovation</p>
           </div>
         </div>
@@ -114,10 +123,11 @@ export default function Projects() {
                 <div className="project-header">
                   {project.event && <span className="project-event">{project.event}</span>}
                   <h3 className="project-title">{project.title}</h3>
-                  {(project.winner || project.placement) && (
+                  {(project.winner || project.placement || project.stat) && (
                     <div className="project-awards">
                       {project.winner && <span className="award-pill award-pill--winner">Winner</span>}
                       {project.placement && <span className="award-pill">{project.placement}</span>}
+                      {project.stat && <span className="award-pill">{project.stat}</span>}
                     </div>
                   )}
                   {project.tracks && (
