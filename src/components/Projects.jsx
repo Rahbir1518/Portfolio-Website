@@ -23,7 +23,7 @@ export default function Projects() {
     },
     {
       title: "Vroomi",
-      event: "Hack the Valley 2025",
+      event: "SpurHacks 2025",
       winner: true,
       placement: "3rd Place",
       description: "Ride-sharing app with geolocation-based cost-splitting. Features route optimization using Travelling Postman Problem algorithms.",
